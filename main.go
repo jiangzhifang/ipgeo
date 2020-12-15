@@ -38,6 +38,7 @@ func main() {
 	}
 
 	defer resp.Body.Close()
+
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		fmt.Println(err)
@@ -49,6 +50,6 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
-	// fmt.Println(ipInfo)
+
 	fmt.Printf("%s, %s, %s, %s\n", ipInfo.Query, ipInfo.Country, ipInfo.City, ipInfo.Isp)
 }
